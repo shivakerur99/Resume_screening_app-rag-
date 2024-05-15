@@ -16,7 +16,7 @@ from langchain.docstore.document import Document as LangchainDocument
 import replicate
 
 import os
-os.environ['REPLICATE_API_TOKEN'] = "r8_GV1rWUgBdo8XUCpJPFTb4OqnJBzEQmB1LaRqx"
+os.environ['REPLICATE_API_TOKEN'] = "r8_6iCgLwxeyydosUHiS1eb0A0sKiUewac1KkA1g"
 
 
 app = FastAPI()
@@ -128,7 +128,7 @@ async def process_data(data: DataInput):
     # Load required models and components from Langchain library
     dom = [LangchainDocument(page_content=response_data, metadata={"source": "local"})]
 
-    text_splitter = CharacterTextSplitter(chunk_size=3000, chunk_overlap=0)
+    text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
     docs = text_splitter.split_documents(dom)
 
     embeddings = HuggingFaceEmbeddings()

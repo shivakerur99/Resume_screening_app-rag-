@@ -28,4 +28,8 @@ setup your HuggingFace access token in hugging face website
 then run command [uvicorn main:app --reload]
 
 
+# video link
+
+https://drive.google.com/file/d/1zLbmJy0hbqAemLfGC2EY8iye3X25t2sC/view?usp=sharing
+
 
